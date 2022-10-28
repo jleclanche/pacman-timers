@@ -1,0 +1,9 @@
+[Unit]
+Description=Update packages installed with Pacman every week day at 4am
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 04:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

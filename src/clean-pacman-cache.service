@@ -1,0 +1,10 @@
+[Unit]
+Description=Clear the pacman cache (uninstalled packages only)
+Wants=clean-pacman-cache.timer
+
+[Service]
+Type=oneshot
+ExecStart=sudo pacman -Sc --noconfirm
+
+[Install]
+WantedBy=multi-user.target

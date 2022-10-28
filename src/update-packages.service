@@ -1,0 +1,10 @@
+[Unit]
+Description=Update packages installed with Pacman
+Wants=update-packages.timer
+
+[Service]
+Type=oneshot
+ExecStart=sudo pacman -Syu --noconfirm
+
+[Install]
+WantedBy=multi-user.target
